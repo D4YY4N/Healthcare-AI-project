@@ -1,76 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SehatAI — Demo Dashboard</title>
-
-  <link href="styles.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- jsQR for QR decoding -->
-  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
-  <!-- Optional: Tesseract.js (heavy). Uncomment in script.js if you decide to use it. -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/tesseract.js@v2.1.4/dist/tesseract.min.js"></script> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare AI Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <aside class="sidebar">
-      <div class="brand">SehatAI</div>
-      <nav>
-        <a class="active">Home</a>
-        <a>Patient Records</a>
-        <a>Scan ID / QR</a>
-        <a>AI Results</a>
-        <a>Reports</a>
-      </nav>
-    </aside>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">Healthcare AI</h2>
+    <nav>
+      <a href="#">🏠 Home</a>
+      <a href="#">🧑 Patients</a>
+      <a href="#">📷 Scan ID/QR</a>
+      <a href="#">🤖 AI Results</a>
+      <a href="#">📄 Reports</a>
+    </nav>
+  </aside>
 
-    <main class="main">
-      <header class="topbar">
-        <h1>Healthcare AI Dashboard (Demo)</h1>
-        <div class="user">Dayyan</div>
-      </header>
+  <!-- Main Content -->
+  <main class="main">
+    <header class="header">
+      <h1>Dashboard</h1>
+      <div class="profile">👤</div>
+    </header>
 
-      <section class="content">
-        <div class="left">
-          <div class="card">
-            <h3>Patient Input</h3>
-            <label>Enter CNIC / NADRA ID</label>
-            <input id="nicInput" placeholder="45101-1234567-1" />
-            <div style="height:10px"></div>
-            <label>Or upload QR / ID image (PNG/JPG)</label>
-            <input type="file" id="fileInput" accept="image/*"/>
-            <div id="imagePreview"></div>
-            <div id="fileMsg" class="muted small"></div>
-            <div style="height:10px"></div>
-            <button id="fetchBtn" class="btn">Fetch Patient</button>
-          </div>
-
-          <div class="card" id="patientCard" style="display:none;">
-            <h3>Patient Data</h3>
-            <div id="patientInfo"></div>
-          </div>
-        </div>
-
-        <div class="right">
-          <div class="card" id="aiCard" style="display:none;">
-            <h3>AI Results</h3>
-            <div id="aiResult"></div>
-            <div style="height:10px"></div>
-            <button id="reportBtn" class="btn secondary">Generate Report</button>
-          </div>
-
-          <div class="card">
-            <h3>Notes / OCR</h3>
-            <textarea id="ocrText" rows="6" placeholder="OCR output will appear here (optional)"></textarea>
-            <div class="muted small">Optional: you can enable Tesseract.js in script.js to run OCR in-browser (slow on big images).</div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script src="script.js"></script>
+    <section class="cards">
+      <div class="card">
+        <h3>Patients</h3>
+        <p>Manage patient records</p>
+      </div>
+      <div class="card">
+        <h3>Scan ID</h3>
+        <p>Quick QR/ID card scanning</p>
+      </div>
+      <div class="card">
+        <h3>AI Results</h3>
+        <p>View condition analysis</p>
+      </div>
+      <div class="card">
+        <h3>Reports</h3>
+        <p>Generate and export reports</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

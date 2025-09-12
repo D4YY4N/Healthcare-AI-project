@@ -1,35 +1,88 @@
-:root{
-  --bg:#f6fbfa;
-  --card:#ffffff;
-  --primary:#0ea5a4; /* teal */
-  --accent:#2563eb;  /* blue */
-  --muted:#6b7280;
-  --text:#0f172a;
-  --radius:12px;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-size:14px}
-.app{display:flex;min-height:100vh}
-.sidebar{width:260px;background:var(--primary);color:#fff;padding:28px;border-radius:0 18px 18px 0;box-shadow: 0 8px 30px rgba(10,10,10,0.06)}
-.brand{font-weight:700;font-size:20px;margin-bottom:18px}
-.sidebar nav a{display:block;padding:12px 8px;border-radius:8px;color:rgba(255,255,255,0.95);margin:6px 0;text-decoration:none;cursor:pointer}
-.sidebar nav a.active{background:rgba(255,255,255,0.08)}
-.main{flex:1;padding:20px 30px}
-.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.content{display:flex;gap:20px}
-.left{flex:1;max-width:680px}
-.right{flex:0.6;min-width:320px}
-.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.06);margin-bottom:16px}
-input[type=text], input[type=file], textarea, input{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef2;outline:none}
-.btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;border:0;cursor:pointer;margin-top:10px}
-.btn.secondary{background:#fff;color:var(--primary);border:1px solid #e6eef2}
-.muted{color:var(--muted)}
-.small{font-size:12px}
-#patientInfo{display:flex;flex-direction:column;gap:8px}
-.pfield{display:flex;gap:14px;align-items:center}
-.pfield b{width:120px;color:var(--muted)}
-.progress-wrap{height:20px;background:#eef6f5;border-radius:12px;overflow:hidden}
-.progress-bar{height:100%;background:var(--primary);width:0;transition:width .6s}
-.status-dot{display:inline-block;width:10px;height:10px;border-radius:50%}
-#imagePreview img{max-width:100%;border-radius:8px;margin-top:8px}
+
+/* Layout */
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #14B8A6;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.sidebar nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.profile {
+  font-size: 1.5rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
