@@ -1,0 +1,29 @@
+{
+  "45101-1234567-1": {
+    "nic": "45101-1234567-1",
+    "name": "Awais Ahmed",
+    "dob": "1999-08-12",
+    "age": 23,
+    "gender": "Male",
+    "contact": "+92 333 1234567",
+    "medical_history": "Diabetes"
+  },
+  "61101-9876543-2": {
+    "nic": "61101-9876543-2",
+    "name": "Sara Bano",
+    "dob": "1988-03-24",
+    "age": 36,
+    "gender": "Female",
+    "contact": "+92 300 2223344",
+    "medical_history": "Hypertension"
+  },
+  "34101-1112223-7": {
+    "nic": "34101-1112223-7",
+    "name": "Ali Khan",
+    "dob": "1975-05-05",
+    "age": 49,
+    "gender": "Male",
+    "contact": "+92 321 9988776",
+    "medical_history": "Diabetes, Hypertension"
+  }
+}
