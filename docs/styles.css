@@ -81,3 +81,19 @@ body {
   margin: 0 0 10px;
   color: #0f766e;
 }
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.sidebar nav a.active {
+  background-color: #134e4a;
+  font-weight: 600;
+}

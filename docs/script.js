@@ -174,3 +174,24 @@ function escapeHtml(t){ return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').repl
 //   q('ocrText').value = res.data.text;
 //   await worker.terminate();
 // }
+// --------------------
+// Scroll spy for sidebar
+// --------------------
+const links = document.querySelectorAll('.sidebar nav a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  document.querySelectorAll('section').forEach(section => {
+    const sectionTop = section.offsetTop - 60;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  links.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});

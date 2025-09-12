@@ -25,5 +25,25 @@
     "gender": "Male",
     "contact": "+92 321 9988776",
     "medical_history": "Diabetes, Hypertension"
+  },
+
+    "35201-1234567-1": {
+    "name": "Ali Khan",
+    "nic": "35201-1234567-1",
+    "dob": "1975-05-12",
+    "age": 50,
+    "gender": "Male",
+    "contact": "0300-1234567",
+    "medical_history": "Diabetes, Hypertension"
+  },
+  "35201-9876543-2": {
+    "name": "Sara Ahmed",
+    "nic": "35201-9876543-2",
+    "dob": "1990-03-22",
+    "age": 35,
+    "gender": "Female",
+    "contact": "0301-9876543",
+    "medical_history": "Asthma"
   }
+
 }
